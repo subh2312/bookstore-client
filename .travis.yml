@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 16.14.2
+script:
+  -"npm run build"
+  -"npm run test:nowatch"
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_TOKEN
+  app:book-store-react-client
